@@ -539,48 +539,60 @@
     <!-- Interactive Navigation Logic Script -->
     <script>
         let currentSlide = 1;
-        const totalSlides = 3;
+const totalSlides = 3;
 
-        function updateSlidePosition() {
-            const slides = document.querySelectorAll('.slide');
-            
-            slides.forEach((slide, idx) => {
-                if (idx + 1 === currentSlide) {
-                    slide.style.display = 'flex';
-                    setTimeout(() => {
-                        slide.classList.add('active');
-                    }, 20);
-                } else {
-                    slide.classList.remove('active');
-                    slide.style.display = 'none';
-                }
-            });
-
-            document.getElementById('slide-num').innerText = String(currentSlide).padStart(2, '0');
-            const progressPercentage = (currentSlide / totalSlides) * 100;
-            document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
-
-            document.getElementById('prev-btn').disabled = currentSlide === 1;
-            document.getElementById('next-btn').disabled = currentSlide === totalSlides;
+function updateSlidePosition() {
+    const slides = document.querySelectorAll('.slide');
+    
+    slides.forEach((slide, idx) => {
+        if (idx + 1 === currentSlide) {
+            slide.style.display = 'flex';
+            setTimeout(() => {
+                slide.classList.add('active');
+            }, 20);
+        } else {
+            slide.classList.remove('active');
+            slide.style.display = 'none';
         }
+    });
 
-        function changeSlide(direction) {
-            const nextTarget = currentSlide + direction;
-            if (nextTarget >= 1 && nextTarget <= totalSlides) {
-                currentSlide = nextTarget;
-                updateSlidePosition();
-            }
-        }
+    document.getElementById('slide-num').innerText = String(currentSlide).padStart(2, '0');
+    const progressPercentage = (currentSlide / totalSlides) * 100;
+    document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
 
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === ' ') {
-                e.preventDefault();
-                changeSlide(1);
-            } else if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                changeSlide(-1);
-            }
+    document.getElementById('prev-btn').disabled = currentSlide === 1;
+    document.getElementById('next-btn').disabled = currentSlide === totalSlides;
+    
+    // FORCE SCROLL TO TOP: Works reliably across Safari, Chrome, and mobile webviews
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant' // 'instant' or 'auto' prevents sluggish race conditions on mobile
         });
+        // Backup fallback specifically for stubborn mobile overflow wrappers
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }, 50); 
+}
+
+function changeSlide(direction) {
+    const nextTarget = currentSlide + direction;
+    if (nextTarget >= 1 && nextTarget <= totalSlides) {
+        currentSlide = nextTarget;
+        updateSlidePosition();
+    }
+}
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        changeSlide(1);
+    } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        changeSlide(-1);
+    }
+});
     </script>
 </body>
 </html>
