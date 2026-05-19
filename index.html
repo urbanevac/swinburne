@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swinburne Sarawak 3-Year Strategic Roadmap | Azizi Jennis</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Smooth Slide Animations */
+        .slide { 
+            display: none; 
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .slide.active { 
+            display: flex; 
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Light Mode Brand Colors matching swinburne.edu.my */
+        .bg-swinburne-white { background-color: #FFFFFF; }
+        .bg-swinburne-lightgray { background-color: #F9F9F9; }
+        .bg-swinburne-red { background-color: #E2231A; }
+        .text-swinburne-red { color: #E2231A; }
+        .text-swinburne-charcoal { color: #111111; }
+        .border-swinburne-red { border-color: #E2231A; }
+        .border-swinburne-gray { border-color: #E2E8F0; }
+    </style>
+</head>
+<body class="bg-swinburne-white text-slate-800 font-sans h-screen flex flex-col justify-between overflow-hidden selection:bg-red-600 selection:text-white">
+
+    <!-- Top Navigation / Brand Bar -->
+    <header class="w-full bg-swinburne-lightgray border-b border-swinburne-gray px-8 py-5 flex justify-between items-center z-10">
+        <div class="flex items-center gap-4">
+            <!-- Swinburne Red Brand Block Indicator with pulse ripple -->
+            <div class="w-4 h-4 bg-swinburne-red shadow-[0_0_8px_rgba(226,35,26,0.4)] animate-pulse"></div>
+            <a href="https://www.swinburne.edu.my/" target="_blank" class="text-base font-bold uppercase tracking-wider text-neutral-700 hover:text-swinburne-red transition-colors duration-300">
+                Swinburne University of Technology Sarawak
+            </a>
+        </div>
+        <div class="text-sm font-black uppercase tracking-wider text-neutral-800 bg-white px-4 py-2 rounded border border-swinburne-gray shadow-sm hover:border-neutral-400 transition-all duration-300 select-none">
+            Azizi Jennis
+        </div>
+    </header>
+
+    <!-- Main Presentation Container -->
+    <main class="flex-1 w-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-center relative">
+        
+        <!-- ==================== SLIDE 1: STRATEGIC PARADOX ==================== -->
+        <section id="slide-1" class="slide active w-full flex-col justify-center py-4">
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight text-center mb-8 md:mb-14 uppercase text-swinburne-charcoal border-b-4 border-swinburne-red pb-4 max-w-4xl mx-auto">
+                Navigating Growth: A 3-Year Strategic Roadmap
+            </h1>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-stretch relative">
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 transform -translate-x-1/2"></div>
+                
+                <!-- Left: Discipline -->
+                <div class="bg-swinburne-lightgray border border-swinburne-gray rounded-none p-8 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-slate-300 hover:scale-[1.01] transition-all duration-300 group">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="p-3 bg-white text-swinburne-red border border-swinburne-gray shadow-sm group-hover:border-swinburne-red transition-colors duration-300">
+                                <i class="fa-solid fa-square-poll-vertical text-2xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-extrabold tracking-wide text-swinburne-charcoal uppercase">The Discipline of Planning</h2>
+                        </div>
+                        <blockquote class="text-xl md:text-2xl font-bold italic border-l-4 border-swinburne-red pl-4 my-6 text-neutral-700 bg-white py-3 pr-2 border-y border-r border-swinburne-gray transition-all duration-300 group-hover:bg-neutral-50">
+                            "Failing to plan is planning to fail."
+                            <span class="block text-sm font-mono tracking-wider text-neutral-500 mt-2 not-italic font-normal">— Benjamin Franklin</span>
+                        </blockquote>
+                    </div>
+                    <ul class="space-y-4 font-bold text-neutral-600 text-base md:text-lg mt-4">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-square text-swinburne-red text-xs mt-2 shrink-0 group-hover:scale-125 transition-transform duration-300"></i> <span>Establish institutional PMO governance built for local operational agility.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-square text-swinburne-red text-xs mt-2 shrink-0 group-hover:scale-125 transition-transform duration-300"></i> <span>Safeguard campus infrastructure transformation and capital expansion investments.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-square text-swinburne-red text-xs mt-2 shrink-0 group-hover:scale-125 transition-transform duration-300"></i> <span>Strict milestone tracking baseline mapping to core university criteria.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Right: Agility -->
+                <div class="bg-swinburne-lightgray border border-swinburne-gray rounded-none p-8 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-slate-300 hover:scale-[1.01] transition-all duration-300 group">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="p-3 bg-white text-neutral-800 border border-swinburne-gray shadow-sm group-hover:border-neutral-800 transition-colors duration-300">
+                                <i class="fa-solid fa-gauge-high text-2xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-extrabold tracking-wide text-swinburne-charcoal uppercase">The Need for Agility</h2>
+                        </div>
+                        <blockquote class="text-xl md:text-2xl font-bold italic border-l-4 border-neutral-800 pl-4 my-6 text-neutral-700 bg-white py-3 pr-2 border-y border-r border-swinburne-gray transition-all duration-300 group-hover:bg-neutral-50">
+                            "No plan survives an encounter with the enemy."
+                            <span class="block text-sm font-mono tracking-wider text-neutral-500 mt-2 not-italic font-normal">— Helmuth von Moltke</span>
+                        </blockquote>
+                    </div>
+                    <ul class="space-y-4 font-bold text-neutral-600 text-base md:text-lg mt-4">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-bolt text-swinburne-red text-sm mt-1.5 shrink-0 group-hover:animate-bounce"></i> <span>Adopt rapid Agile execution cycles to manage changing requirements.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-bolt text-swinburne-red text-sm mt-1.5 shrink-0 group-hover:animate-bounce"></i> <span>Continuous tactical loops allowing pivots without bureaucratic delays.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-bolt text-swinburne-red text-sm mt-1.5 shrink-0 group-hover:animate-bounce"></i> <span>Eliminate friction points to rapidly expand campus capacity targets.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 2: FROM FOUNDATION TO VELOCITY ==================== -->
+        <section id="slide-2" class="slide w-full flex-col justify-center py-4">
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight text-center mb-8 md:mb-14 uppercase text-swinburne-charcoal border-b-4 border-swinburne-gray pb-4 max-w-4xl mx-auto">
+                FROM FOUNDATION TO VELOCITY
+            </h1>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Pillar 1 -->
+                <div class="bg-swinburne-lightgray border border-swinburne-gray rounded-none p-6 flex flex-col justify-between border-t-4 border-t-swinburne-red shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 group">
+                    <div>
+                        <div class="text-xs font-mono text-neutral-700 uppercase tracking-widest mb-3 font-black bg-white px-2.5 py-1 w-max border border-swinburne-gray">Year 1 • Stabilize</div>
+                        <h2 class="text-xl md:text-2xl font-black text-swinburne-charcoal mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-sliders text-swinburne-red text-xl group-hover:rotate-45 transition-transform duration-300"></i> Agile Governance
+                        </h2>
+                        <p class="text-base text-neutral-600 mb-6 leading-relaxed font-medium">
+                            Deploy a balanced Hybrid PMO. Protect infrastructure with Waterfall frameworks while running system digitizations and student portals through iterative Scrum Sprints.
+                        </p>
+                    </div>
+                    <div class="border-t border-swinburne-gray pt-4 space-y-3 text-sm text-neutral-700 font-bold">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-check text-swinburne-red text-base shrink-0"></i> Transparent Value Realization tracking</div>
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-check text-swinburne-red text-base shrink-0"></i> Clean visibility via live digital Kanbans</div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 (Updated with Locals Coaching & Training) -->
+                <div class="bg-swinburne-lightgray border border-swinburne-gray rounded-none p-6 flex flex-col justify-between border-t-4 border-t-neutral-800 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 group">
+                    <div>
+                        <div class="text-xs font-mono text-neutral-700 uppercase tracking-widest mb-3 font-black bg-white px-2.5 py-1 w-max border border-swinburne-gray">Year 2 • Empower</div>
+                        <h2 class="text-xl md:text-2xl font-black text-swinburne-charcoal mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-users text-swinburne-red text-xl group-hover:scale-110 transition-transform duration-300"></i> Growing Local Talent
+                        </h2>
+                        <p class="text-base text-neutral-600 mb-6 leading-relaxed font-medium">
+                            Establish dedicated training and coaching tracks to upskill local campus operations. Pair this execution with active project "living labs" to simultaneously absorb student talent into delivery pipelines.
+                        </p>
+                    </div>
+                    <div class="border-t border-swinburne-gray pt-4 space-y-3 text-sm text-neutral-700 font-bold">
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">Structured coaching & upskilling for local operational staff</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">High-impact Work-Integrated Learning (WIL) student pathways</span></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-swinburne-lightgray border border-swinburne-gray rounded-none p-6 flex flex-col justify-between border-t-4 border-t-swinburne-red shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 group">
+                    <div>
+                        <div class="text-xs font-mono text-neutral-700 uppercase tracking-widest mb-3 font-black bg-white px-2.5 py-1 w-max border border-swinburne-gray">Year 3 • Expand</div>
+                        <h2 class="text-xl md:text-2xl font-black text-swinburne-charcoal mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-chart-line text-swinburne-red text-xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i> Accelerate at Scale
+                        </h2>
+                        <p class="text-base text-neutral-600 mb-6 leading-relaxed font-medium">
+                            Leverage matured governance to seamlessly scale campus capability beyond 5,000 students without expanding administrative friction or baseline overhead constraints.
+                        </p>
+                    </div>
+                    <div class="border-t border-swinburne-gray pt-4 space-y-3 text-sm text-neutral-700 font-bold">
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">System integration across core administrative registries</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">Optimized resource allocation to shorten project delivery timelines</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 3: OPERATIONAL ENGINE & STAKEHOLDERS ==================== -->
+        <section id="slide-3" class="slide w-full flex-col justify-center py-4">
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight text-center mb-8 md:mb-14 uppercase text-swinburne-charcoal border-b-4 border-swinburne-gray pb-4 max-w-4xl mx-auto">
+                The Operational Engine Room
+            </h1>
+            
+            <div class="grid md:grid-cols-3 gap-6 items-stretch">
+                <!-- Column 1: Tools (Adaptive Tech Stack Options) -->
+                <div class="bg-swinburne-lightgray border border-swinburne-gray p-6 rounded-none flex flex-col shadow-sm hover:border-slate-300 transition-all duration-300">
+                    <h3 class="text-lg font-black text-swinburne-red uppercase tracking-wider mb-4 flex items-center gap-3 border-b border-slate-200 pb-2">
+                        <i class="fa-solid fa-toolbox"></i> Flexible Tech Options
+                    </h3>
+                    <ul class="space-y-4 text-base text-neutral-700 flex-1 font-bold">
+                        <li class="hover:translate-x-1 transition-transform duration-200">
+                            <strong class="text-swinburne-charcoal block text-sm uppercase tracking-wider">Tracking & Roadmaps:</strong>
+                            <span class="text-neutral-600 font-medium">Jira Enterprise <span class="text-slate-400">OR</span> Smartsheet PMO baselines</span>
+                        </li>
+                        <li class="hover:translate-x-1 transition-transform duration-200">
+                            <strong class="text-swinburne-charcoal block text-sm uppercase tracking-wider">Knowledge Hub:</strong>
+                            <span class="text-neutral-600 font-medium">Confluence wikis <span class="text-slate-400">OR</span> Microsoft SharePoint ecosystems</span>
+                        </li>
+                        <li class="hover:translate-x-1 transition-transform duration-200">
+                            <strong class="text-swinburne-charcoal block text-sm uppercase tracking-wider">Executive Dashboards:</strong>
+                            <span class="text-neutral-600 font-medium">Power BI pipeline syncs <span class="text-slate-400">OR</span> Tableau insights</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2: Team Structure -->
+                <div class="bg-swinburne-lightgray border border-swinburne-gray p-6 rounded-none flex flex-col shadow-sm hover:border-slate-300 transition-all duration-300">
+                    <h3 class="text-lg font-black text-neutral-800 uppercase tracking-wider mb-4 flex items-center gap-3 border-b border-slate-200 pb-2">
+                        <i class="fa-solid fa-sitemap"></i> Project Structure
+                    </h3>
+                    <ul class="space-y-3 text-base text-neutral-700 flex-1 font-bold">
+                        <li class="hover:translate-x-1 transition-transform duration-200"><strong class="text-swinburne-charcoal block text-lg font-extrabold">Strategic PM Lead:</strong> Direct lifecycle delivery.</li>
+                        <li class="hover:translate-x-1 transition-transform duration-200"><strong class="text-swinburne-charcoal block text-lg font-extrabold">Functional Scrum Team:</strong> Deans, IT Architects, Vendors.</li>
+                        <li class="hover:translate-x-1 transition-transform duration-200"><strong class="text-swinburne-charcoal block text-lg font-extrabold">Sarawak Intern Pipeline:</strong> Driving campus-level WIL goals.</li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Stakeholder Management -->
+                <div class="bg-swinburne-lightgray border border-swinburne-gray p-6 rounded-none flex flex-col shadow-sm hover:border-slate-300 transition-all duration-300">
+                    <h3 class="text-lg font-black text-swinburne-red uppercase tracking-wider mb-4 flex items-center gap-3 border-b border-slate-200 pb-2">
+                        <i class="fa-solid fa-handshake"></i> Stakeholder Strategy
+                    </h3>
+                    <ul class="space-y-3 text-base text-neutral-700 flex-1 font-bold">
+                        <li class="hover:translate-x-1 transition-transform duration-200"><strong class="text-swinburne-charcoal block text-lg font-extrabold">Single Source of Truth:</strong> Eliminate metric variance.</li>
+                        <li class="hover:translate-x-1 transition-transform duration-200"><strong class="text-swinburne-charcoal block text-lg font-extrabold">Bi-Weekly Review Loops:</strong> Continuous MVP value demos.</li>
+                        <li class="hover:translate-x-1 transition-transform duration-200"><strong class="text-swinburne-charcoal block text-lg font-extrabold">Strategic Alignment:</strong> Map work directly to university goals.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Closing Callout -->
+            <div class="bg-swinburne-lightgray border border-swinburne-gray rounded-none p-5 text-center mt-8 shadow-sm max-w-4xl mx-auto w-full hover:shadow-md transition-shadow duration-300">
+                <p class="text-lg md:text-xl font-extrabold tracking-wide text-swinburne-charcoal italic">
+                    "Governance provides our structural foundation, Talent fuels our engine, and Scaling secures our destination."
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Navigation Controls & Custom Profile Footer -->
+    <footer class="w-full bg-swinburne-lightgray border-t border-swinburne-gray px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4 z-10 select-none">
+        <!-- Profile/Author Footnote -->
+        <div class="text-center md:text-left order-2 md:order-1">
+            <span class="text-sm font-bold tracking-wide text-neutral-600">
+                Prepared by 
+                <a href="https://linkedin.com/in/azizijennis" target="_blank" class="text-swinburne-red hover:underline font-extrabold transition-colors duration-300 mx-1">Azizi Jennis</a> 
+                for <a href="https://www.swinburne.edu.my/" target="_blank" class="text-neutral-700 hover:text-swinburne-red hover:underline font-extrabold transition-colors duration-300">Swinburne University of Technology Sarawak</a>
+            </span>
+        </div>
+
+        <!-- Pagination & Interactive Button Controls -->
+        <div class="flex items-center gap-8 order-1 md:order-2 w-full md:w-auto justify-between md:justify-end">
+            <!-- Slide Counter Bar -->
+            <div class="flex items-center gap-3">
+                <span id="slide-num" class="text-base font-mono font-black text-swinburne-red">01</span>
+                <div class="w-28 h-2 bg-slate-200 rounded-none border border-slate-300 overflow-hidden">
+                    <div id="progress-bar" class="h-full bg-swinburne-red transition-all duration-500 ease-out w-1/3"></div>
+                </div>
+                <span class="text-base font-mono font-bold text-slate-400">03</span>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="flex items-center gap-2">
+                <button onclick="changeSlide(-1)" class="w-10 h-10 flex items-center justify-center bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 disabled:opacity-30 disabled:pointer-events-none cursor-pointer transition-all duration-200 active:scale-95" id="prev-btn" disabled>
+                    <i class="fa-solid fa-chevron-left text-base"></i>
+                </button>
+                <button onclick="changeSlide(1)" class="w-10 h-10 flex items-center justify-center bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 disabled:opacity-30 disabled:pointer-events-none cursor-pointer transition-all duration-200 active:scale-95" id="next-btn">
+                    <i class="fa-solid fa-chevron-right text-base"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Logic Script -->
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 3;
+
+        function updateSlidePosition() {
+            const slides = document.querySelectorAll('.slide');
+            
+            slides.forEach((slide, idx) => {
+                if (idx + 1 === currentSlide) {
+                    slide.style.display = 'flex';
+                    setTimeout(() => {
+                        slide.classList.add('active');
+                    }, 20);
+                } else {
+                    slide.classList.remove('active');
+                    slide.style.display = 'none';
+                }
+            });
+
+            document.getElementById('slide-num').innerText = String(currentSlide).padStart(2, '0');
+            const progressPercentage = (currentSlide / totalSlides) * 100;
+            document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
+
+            document.getElementById('prev-btn').disabled = currentSlide === 1;
+            document.getElementById('next-btn').disabled = currentSlide === totalSlides;
+        }
+
+        function changeSlide(direction) {
+            const nextTarget = currentSlide + direction;
+            if (nextTarget >= 1 && nextTarget <= totalSlides) {
+                currentSlide = nextTarget;
+                updateSlidePosition();
+            }
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                changeSlide(-1);
+            }
+        });
+    </script>
+</body>
+</html>
