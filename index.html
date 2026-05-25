@@ -34,6 +34,51 @@
         .text-swinburne-charcoal { color: #111111; }
         .border-swinburne-red { border-color: #E2231A; }
         .border-slate-300 { border-color: #E2E8F0; }
+
+        /* Acronym Tooltips */
+        .acro {
+            border-bottom: 1.5px dashed #E2231A;
+            cursor: help;
+            position: relative;
+            white-space: nowrap;
+            display: inline-block;
+        }
+        .acro::after {
+            content: attr(data-tip);
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #111111;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+            padding: 5px 10px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.18s ease;
+            z-index: 50;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.4;
+        }
+        .acro::before {
+            content: '';
+            position: absolute;
+            bottom: calc(100% + 2px);
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #111111;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.18s ease;
+            z-index: 50;
+        }
+        .acro:hover::after,
+        .acro:hover::before { opacity: 1; }
     </style>
 </head>
 <body class="bg-swinburne-white text-slate-900 font-sans min-h-screen flex flex-col justify-between selection:bg-red-600 selection:text-white">
@@ -83,9 +128,9 @@
                         </blockquote>
                     </div>
                     <ul class="space-y-2 md:space-y-3 font-bold text-neutral-800 text-sm md:text-base mt-2 md:mt-3">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-square text-swinburne-red text-[10px] md:text-xs mt-1.5 md:mt-2 shrink-0 group-hover:scale-125 transition-transform duration-300"></i> <span>Establish institutional PMO governance built for local operational agility.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-square text-swinburne-red text-[10px] md:text-xs mt-1.5 md:mt-2 shrink-0 group-hover:scale-125 transition-transform duration-300"></i> <span>Establish institutional <span class="acro" data-tip="Project Management Office — the central body governing project standards, processes and oversight">PMO</span> governance built for local operational agility.</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-square text-swinburne-red text-[10px] md:text-xs mt-1.5 md:mt-2 shrink-0 group-hover:scale-125 transition-transform duration-300"></i> <span>Safeguard campus infrastructure transformation and capital expansion investments.</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-square text-swinburne-red text-[10px] md:text-xs mt-1.5 md:mt-2 shrink-0 group-hover:scale-125 transition-transform duration-300"></i> <span>Strict milestone tracking baseline mapping to core university criteria.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-square text-swinburne-red text-[10px] md:text-xs mt-1.5 md:mt-2 shrink-0 group-hover:scale-125 transition-transform duration-300"></i> <span>Milestone baselines made visible — live <span class="acro" data-tip="Red / Amber / Green — a traffic-light system indicating project health at a glance">RAG</span> status, risk registers, and sprint progress tracked in a single PMO dashboard.</span></li>
                     </ul>
                 </div>
 
@@ -103,7 +148,7 @@
                         </blockquote>
                     </div>
                     <ul class="space-y-2 md:space-y-3 font-bold text-neutral-800 text-sm md:text-base mt-2 md:mt-3">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-bolt text-swinburne-red text-xs md:text-sm mt-1 shrink-0 group-hover:animate-bounce"></i> <span>Adopt rapid Agile execution cycles to manage changing requirements.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-bolt text-swinburne-red text-xs md:text-sm mt-1 shrink-0 group-hover:animate-bounce"></i> <span>Adopt rapid <span class="acro" data-tip="Agile — an iterative approach to project delivery that prioritises flexibility, collaboration and continuous improvement over rigid upfront planning">Agile</span> execution cycles to manage changing requirements.</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-bolt text-swinburne-red text-xs md:text-sm mt-1 shrink-0 group-hover:animate-bounce"></i> <span>Continuous tactical loops allowing pivots without bureaucratic delays.</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-bolt text-swinburne-red text-xs md:text-sm mt-1 shrink-0 group-hover:animate-bounce"></i> <span>Eliminate friction points to rapidly expand campus capacity targets.</span></li>
                     </ul>
@@ -124,12 +169,12 @@
                             <i class="fa-solid fa-sliders text-swinburne-red text-lg md:text-xl group-hover:rotate-45 transition-transform duration-300"></i> Agile Governance
                         </h2>
                         <p class="text-sm md:text-base text-neutral-800 mb-4 md:mb-6 leading-relaxed font-medium">
-                            Deploy a balanced Hybrid PMO. Protect infrastructure with Waterfall frameworks while running system digitizations and student portals through iterative Scrum Sprints.
+                            Deploy a balanced Hybrid <span class="acro" data-tip="Project Management Office — the central body governing project standards, processes and oversight">PMO</span>. Protect infrastructure with Waterfall frameworks while running system digitizations and student portals through iterative <span class="acro" data-tip="Scrum — an Agile framework using fixed-length Sprints and defined roles (Scrum Master, Product Owner, Dev Team) to deliver work incrementally">Scrum</span> Sprints.
                         </p>
                     </div>
                     <div class="border-t border-slate-300 pt-4 space-y-3 text-xs md:text-sm text-neutral-700 font-bold">
                         <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span>Transparent value realization tracking - showing real business impact</span></div>
-                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span>Real-time digital Kanbans - knowing project status at a glance</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span>Sprint Board visibility across all active workstreams — status known at a glance, every cycle</span></div>
                     </div>
                 </div>
 
@@ -145,7 +190,7 @@
                     </div>
                     <div class="border-t border-slate-300 pt-4 space-y-3 text-xs md:text-sm text-neutral-700 font-bold">
                         <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">Structured coaching & upskilling for local operational staff</span></div>
-                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">High-impact Work-Integrated Learning (WIL) student pathways</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">High-impact Work-Integrated Learning (<span class="acro" data-tip="Work-Integrated Learning — structured programs where students gain real-world professional experience as part of their degree">WIL</span>) student pathways</span></div>
                     </div>
                 </div>
 
@@ -160,7 +205,7 @@
                         </p>
                     </div>
                     <div class="border-t border-slate-300 pt-4 space-y-3 text-xs md:text-sm text-neutral-700 font-bold">
-                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">Portfolio-level benefits realisation — measurable ROI tied to every project milestone</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">Portfolio-level benefits realisation — measurable <span class="acro" data-tip="Return on Investment — a measure of the financial or strategic benefit gained relative to the cost of a project">ROI</span> tied to every project milestone</span></div>
                         <div class="flex items-start gap-3"><i class="fa-solid fa-check text-swinburne-red text-sm md:text-base shrink-0 mt-0.5"></i> <span class="text-neutral-700">Optimized resource allocation to shorten project delivery timelines</span></div>
                     </div>
                 </div>
@@ -187,9 +232,9 @@
                             <span class="text-neutral-800 font-medium text-sm md:text-base">Confluence wikis <span class="text-slate-600 text-xs">OR</span> Microsoft SharePoint ecosystems</span>
                         </li>
                         <li class="hover:translate-x-1 transition-transform duration-200">
-                            <strong class="text-swinburne-charcoal block text-xs uppercase tracking-wider">Executive Dashboards:</strong>
-                            <span class="text-neutral-800 font-medium text-sm md:text-base">Power BI pipeline syncs <span class="text-slate-600 text-xs">OR</span> Tableau insights</span>
-                        </li>
+                                <strong class="text-swinburne-charcoal block text-xs uppercase tracking-wider">Executive Dashboards:</strong>
+                                <span class="text-neutral-800 font-medium text-sm md:text-base">Power BI as primary pipeline — portfolio health, RAG status, and <span class="acro" data-tip="Key Performance Indicators — measurable values that demonstrate how effectively objectives are being achieved">KPIs</span> surfaced in real time</span>
+                            </li>
                     </ul>
                 </div>
                 
@@ -204,7 +249,7 @@
                         </li>
                         <li class="hover:translate-x-1 transition-transform duration-200">
                             <strong class="text-swinburne-charcoal block text-xs uppercase tracking-wider">Functional Scrum Team:</strong>
-                            <span class="text-neutral-800 font-medium text-sm md:text-base">Deans, IT Architects, Vendors.</span>
+                            <span class="text-neutral-800 font-medium text-sm md:text-base">Academic IT, Finance, Facilities & Vendor leads — each owning delivery accountability.</span>
                         </li>
                         <li class="hover:translate-x-1 transition-transform duration-200">
                             <strong class="text-swinburne-charcoal block text-xs uppercase tracking-wider">Sarawak Intern Pipeline:</strong>
@@ -224,7 +269,7 @@
                         </li>
                         <li class="hover:translate-x-1 transition-transform duration-200">
                             <strong class="text-swinburne-charcoal block text-xs uppercase tracking-wider">Bi-Weekly Review Loops:</strong>
-                            <span class="text-neutral-800 font-medium text-sm md:text-base">Continuous MVP value demos.</span>
+                            <span class="text-neutral-800 font-medium text-sm md:text-base">Risk register triage + <span class="acro" data-tip="Minimum Viable Product — the simplest version of a deliverable that demonstrates real value to stakeholders">MVP</span> value demos — issues escalated before they become delays.</span>
                         </li>
                         <li class="hover:translate-x-1 transition-transform duration-200">
                             <strong class="text-swinburne-charcoal block text-xs uppercase tracking-wider">Strategic Alignment:</strong>
@@ -238,6 +283,199 @@
                 <p class="text-sm md:text-xl font-extrabold tracking-wide text-swinburne-charcoal italic">
                     "Governance lays the foundation, Talent Empowerment fuels the engine, and Scaling at Velocity delivers the destination — the three pillars of a PM-led growth strategy."
                 </p>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Hybrid Project/Program Dashboard -->
+        <section id="slide-4" class="slide w-full flex-col justify-center py-2 md:py-4">
+            <h1 class="text-xl md:text-4xl font-black tracking-tight text-center mb-4 md:mb-6 uppercase text-swinburne-charcoal border-b-4 border-swinburne-red pb-3 md:pb-4 max-w-4xl mx-auto w-full">
+                Hybrid PMO Dashboard · Live View
+            </h1>
+
+            <!-- KPI Strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 w-full mb-4 md:mb-5">
+                <div class="bg-swinburne-lightgray border border-slate-300 rounded-none p-3 md:p-4 text-center shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 border-t-4 border-t-swinburne-red">
+                    <div class="text-2xl md:text-4xl font-black text-swinburne-red mb-1">12</div>
+                    <div class="text-[10px] md:text-xs font-black uppercase tracking-widest text-neutral-600">Active Projects</div>
+                </div>
+                <div class="bg-swinburne-lightgray border border-slate-300 rounded-none p-3 md:p-4 text-center shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 border-t-4 border-t-swinburne-red">
+                    <div class="text-2xl md:text-4xl font-black text-swinburne-red mb-1">78<span class="text-lg md:text-2xl">%</span></div>
+                    <div class="text-[10px] md:text-xs font-black uppercase tracking-widest text-neutral-600">On-Track Rate</div>
+                </div>
+                <div class="bg-swinburne-lightgray border border-slate-300 rounded-none p-3 md:p-4 text-center shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 border-t-4 border-t-swinburne-red">
+                    <div class="text-2xl md:text-4xl font-black text-swinburne-red mb-1">3</div>
+                    <div class="text-[10px] md:text-xs font-black uppercase tracking-widest text-neutral-600">Sprint Cycles Active</div>
+                </div>
+                <div class="bg-swinburne-lightgray border border-slate-300 rounded-none p-3 md:p-4 text-center shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 border-t-4 border-t-swinburne-red">
+                    <div class="text-2xl md:text-4xl font-black text-swinburne-red mb-1">94<span class="text-lg md:text-2xl">%</span></div>
+                    <div class="text-[10px] md:text-xs font-black uppercase tracking-widest text-neutral-600">Stakeholder Satisfaction</div>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Grid -->
+            <div class="grid md:grid-cols-3 gap-4 md:gap-5 w-full">
+
+                <!-- Project Portfolio Table -->
+                <div class="md:col-span-2 bg-swinburne-lightgray border border-slate-300 rounded-none p-4 md:p-5 shadow-sm flex flex-col">
+                    <h3 class="text-sm md:text-base font-black uppercase tracking-widest text-swinburne-charcoal mb-3 flex items-center gap-2 border-b border-slate-300 pb-3">
+                        <i class="fa-solid fa-table-list text-swinburne-red"></i> Program Portfolio
+                        <span class="ml-auto text-[10px] font-mono text-neutral-500 normal-case tracking-normal">Q2 2025 · Sarawak Campus</span>
+                    </h3>
+                    <div class="overflow-auto flex-1">
+                        <table class="w-full text-xs md:text-sm text-left border-collapse">
+                            <thead>
+                                <tr class="bg-white border-b-2 border-swinburne-red">
+                                    <th class="py-2 px-2 md:px-3 font-black uppercase tracking-wider text-neutral-700 whitespace-nowrap">Project</th>
+                                    <th class="py-2 px-2 md:px-3 font-black uppercase tracking-wider text-neutral-700 whitespace-nowrap">Method</th>
+                                    <th class="py-2 px-2 md:px-3 font-black uppercase tracking-wider text-neutral-700 whitespace-nowrap">Progress</th>
+                                    <th class="py-2 px-2 md:px-3 font-black uppercase tracking-wider text-neutral-700 whitespace-nowrap">Status</th>
+                                    <th class="py-2 px-2 md:px-3 font-black uppercase tracking-wider text-neutral-700 whitespace-nowrap">Owner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr class="border-b border-slate-200 hover:bg-white transition-colors duration-150 group">
+                                    <td class="py-2 px-2 md:px-3 font-bold text-swinburne-charcoal whitespace-nowrap">Campus Digital Portal</td>
+                                    <td class="py-2 px-2 md:px-3"><span class="bg-neutral-800 text-white text-[9px] font-black px-1.5 py-0.5 uppercase tracking-wider">Scrum</span></td>
+                                    <td class="py-2 px-2 md:px-3 w-28 md:w-36">
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex-1 h-2 bg-slate-200 border border-slate-300 overflow-hidden">
+                                                <div class="h-full bg-swinburne-red" style="width:72%"></div>
+                                            </div>
+                                            <span class="font-black text-neutral-700 whitespace-nowrap">72%</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-2 px-2 md:px-3"><span class="text-[9px] font-black uppercase tracking-wider text-green-700 bg-green-100 border border-green-300 px-1.5 py-0.5">On Track</span></td>
+                                    <td class="py-2 px-2 md:px-3 font-medium text-neutral-600 whitespace-nowrap">IT + WIL Team</td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr class="border-b border-slate-200 hover:bg-white transition-colors duration-150">
+                                    <td class="py-2 px-2 md:px-3 font-bold text-swinburne-charcoal whitespace-nowrap">Lab Block Expansion</td>
+                                    <td class="py-2 px-2 md:px-3"><span class="bg-swinburne-charcoal text-white text-[9px] font-black px-1.5 py-0.5 uppercase tracking-wider">Waterfall</span></td>
+                                    <td class="py-2 px-2 md:px-3 w-28 md:w-36">
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex-1 h-2 bg-slate-200 border border-slate-300 overflow-hidden">
+                                                <div class="h-full bg-swinburne-red" style="width:45%"></div>
+                                            </div>
+                                            <span class="font-black text-neutral-700">45%</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-2 px-2 md:px-3"><span class="text-[9px] font-black uppercase tracking-wider text-green-700 bg-green-100 border border-green-300 px-1.5 py-0.5">On Track</span></td>
+                                    <td class="py-2 px-2 md:px-3 font-medium text-neutral-600 whitespace-nowrap">Facilities PM</td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr class="border-b border-slate-200 hover:bg-white transition-colors duration-150">
+                                    <td class="py-2 px-2 md:px-3 font-bold text-swinburne-charcoal whitespace-nowrap">LMS Upgrade 2.0</td>
+                                    <td class="py-2 px-2 md:px-3"><span class="bg-neutral-800 text-white text-[9px] font-black px-1.5 py-0.5 uppercase tracking-wider">Scrum</span></td>
+                                    <td class="py-2 px-2 md:px-3 w-28 md:w-36">
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex-1 h-2 bg-slate-200 border border-slate-300 overflow-hidden">
+                                                <div class="h-full bg-amber-500" style="width:58%"></div>
+                                            </div>
+                                            <span class="font-black text-neutral-700">58%</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-2 px-2 md:px-3"><span class="text-[9px] font-black uppercase tracking-wider text-amber-700 bg-amber-100 border border-amber-300 px-1.5 py-0.5">At Risk</span></td>
+                                    <td class="py-2 px-2 md:px-3 font-medium text-neutral-600 whitespace-nowrap">Academic IT</td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr class="border-b border-slate-200 hover:bg-white transition-colors duration-150">
+                                    <td class="py-2 px-2 md:px-3 font-bold text-swinburne-charcoal whitespace-nowrap">WIL Industry Pipeline</td>
+                                    <td class="py-2 px-2 md:px-3"><span class="text-[9px] font-black px-1.5 py-0.5 uppercase tracking-wider border border-slate-300 bg-white text-neutral-600">Hybrid</span></td>
+                                    <td class="py-2 px-2 md:px-3 w-28 md:w-36">
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex-1 h-2 bg-slate-200 border border-slate-300 overflow-hidden">
+                                                <div class="h-full bg-swinburne-red" style="width:90%"></div>
+                                            </div>
+                                            <span class="font-black text-neutral-700">90%</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-2 px-2 md:px-3"><span class="text-[9px] font-black uppercase tracking-wider text-green-700 bg-green-100 border border-green-300 px-1.5 py-0.5">On Track</span></td>
+                                    <td class="py-2 px-2 md:px-3 font-medium text-neutral-600 whitespace-nowrap">PMO + Deans</td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr class="hover:bg-white transition-colors duration-150">
+                                    <td class="py-2 px-2 md:px-3 font-bold text-swinburne-charcoal whitespace-nowrap">Campus ERP Migration</td>
+                                    <td class="py-2 px-2 md:px-3"><span class="bg-swinburne-charcoal text-white text-[9px] font-black px-1.5 py-0.5 uppercase tracking-wider">Waterfall</span></td>
+                                    <td class="py-2 px-2 md:px-3 w-28 md:w-36">
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex-1 h-2 bg-slate-200 border border-slate-300 overflow-hidden">
+                                                <div class="h-full bg-red-600" style="width:22%"></div>
+                                            </div>
+                                            <span class="font-black text-neutral-700">22%</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-2 px-2 md:px-3"><span class="text-[9px] font-black uppercase tracking-wider text-red-700 bg-red-100 border border-red-300 px-1.5 py-0.5">Delayed</span></td>
+                                    <td class="py-2 px-2 md:px-3 font-medium text-neutral-600 whitespace-nowrap">Finance + IT</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Sprint Board + Risk Register -->
+                <div class="flex flex-col gap-4">
+                    <!-- Sprint Kanban (simplified) -->
+                    <div class="bg-swinburne-lightgray border border-slate-300 rounded-none p-4 shadow-sm flex-1">
+                        <h3 class="text-xs font-black uppercase tracking-widest text-swinburne-charcoal mb-3 flex items-center gap-2 border-b border-slate-300 pb-2">
+                            <i class="fa-solid fa-columns text-swinburne-red"></i> Sprint Board · Sprint 6
+                        </h3>
+                        <div class="grid grid-cols-3 gap-2 text-[10px]">
+                            <div>
+                                <div class="font-black uppercase tracking-wider text-neutral-500 mb-2 pb-1 border-b border-slate-300">To Do</div>
+                                <div class="space-y-1.5">
+                                    <div class="bg-white border border-slate-300 p-1.5 font-medium text-neutral-700 hover:border-slate-400 transition-colors duration-150">ERP data mapping</div>
+                                    <div class="bg-white border border-slate-300 p-1.5 font-medium text-neutral-700 hover:border-slate-400 transition-colors duration-150">Student ID integration</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-black uppercase tracking-wider text-amber-600 mb-2 pb-1 border-b border-amber-300">In Progress</div>
+                                <div class="space-y-1.5">
+                                    <div class="bg-amber-50 border border-amber-200 p-1.5 font-medium text-neutral-700">Portal UI redesign</div>
+                                    <div class="bg-amber-50 border border-amber-200 p-1.5 font-medium text-neutral-700">LMS API refactor</div>
+                                    <div class="bg-amber-50 border border-amber-200 p-1.5 font-medium text-neutral-700">WIL onboarding flow</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-black uppercase tracking-wider text-green-600 mb-2 pb-1 border-b border-green-300">Done</div>
+                                <div class="space-y-1.5">
+                                    <div class="bg-green-50 border border-green-200 p-1.5 font-medium text-neutral-700">Vendor contracts</div>
+                                    <div class="bg-green-50 border border-green-200 p-1.5 font-medium text-neutral-700">PMO charter sign-off</div>
+                                    <div class="bg-green-50 border border-green-200 p-1.5 font-medium text-neutral-700">Lab scope freeze</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risk Register -->
+                    <div class="bg-swinburne-lightgray border border-slate-300 rounded-none p-4 shadow-sm">
+                        <h3 class="text-xs font-black uppercase tracking-widest text-swinburne-charcoal mb-3 flex items-center gap-2 border-b border-slate-300 pb-2">
+                            <i class="fa-solid fa-triangle-exclamation text-swinburne-red"></i> Risk Register
+                        </h3>
+                        <div class="space-y-2 text-[10px]">
+                            <div class="flex items-center gap-2">
+                                <span class="shrink-0 w-2 h-2 bg-red-500 block"></span>
+                                <span class="font-bold text-neutral-700 flex-1">ERP vendor delay — scope creep risk</span>
+                                <span class="font-black text-red-600 uppercase tracking-wider">High</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="shrink-0 w-2 h-2 bg-amber-500 block"></span>
+                                <span class="font-bold text-neutral-700 flex-1">LMS resource contention in sprint</span>
+                                <span class="font-black text-amber-600 uppercase tracking-wider">Med</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="shrink-0 w-2 h-2 bg-amber-500 block"></span>
+                                <span class="font-bold text-neutral-700 flex-1">WIL intern availability — semester gap</span>
+                                <span class="font-black text-amber-600 uppercase tracking-wider">Med</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="shrink-0 w-2 h-2 bg-green-500 block"></span>
+                                <span class="font-bold text-neutral-700 flex-1">Budget utilisation within approved cap</span>
+                                <span class="font-black text-green-600 uppercase tracking-wider">Low</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -256,9 +494,9 @@
             <div class="flex items-center gap-3">
                 <span id="slide-num" class="text-sm md:text-base font-mono font-black text-swinburne-red">01</span>
                 <div class="w-20 md:w-28 h-2 bg-slate-200 rounded-none border border-slate-300 overflow-hidden">
-                    <div id="progress-bar" class="h-full bg-swinburne-red transition-all duration-500 ease-out w-1/3"></div>
+                    <div id="progress-bar" class="h-full bg-swinburne-red transition-all duration-500 ease-out w-1/4"></div>
                 </div>
-                <span class="text-sm md:text-base font-mono font-bold text-slate-600">03</span>
+                <span class="text-sm md:text-base font-mono font-bold text-slate-600">04</span>
             </div>
 
             <div class="flex items-center gap-2">
@@ -274,7 +512,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 3;
+        const totalSlides = 4;
 
         function updateSlidePosition() {
             const slides = document.querySelectorAll('.slide');
